@@ -6,3 +6,5 @@ def make_stars(n):
 
 make_stars(9)
 
+print('hello')
+
