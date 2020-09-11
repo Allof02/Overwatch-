@@ -45,7 +45,7 @@ with open('xxx.csv' , 'w', newline='') as csv_file:
     csv_writer.writerow(['Username:'] + [username])
     csv_writer.writerow(['Level:'] + [level])
     csv_writer.writerow(['Portrait:'] + [portrait])
-    csv_writer.writerow(['Playtime (Quickplay):'] + [qptime])
+    csv_writer.writerow(['Playtime' , '(Quickplay):'] + [qptime])
 
 
 
