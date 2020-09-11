@@ -1,10 +1,36 @@
 
-def make_stars(n):
-    for i in range(n+1):
-         print('*' * i)
-    return
+import requests
 
-make_stars(9)
+r = requests.get('https://owapi.io/profile/pc/us/ZEROTWO-12301')
+print(r.json())
+data = r.json()
 
-print('hello')
+data["username"]
+username = data["username"]
+
+data["level"]
+level = data["level"]
+
+data["portrait"]
+portrait = data["portrait"]
+
+data["games"]['quickplay']
+quickplay = data["games"]['quickplay']
+
+data["games"]['competitive']
+comp = data["games"]['competitive']
+
+
+quickplay = data["games"]['quickplay']
+
+print(quickplay)
+print(comp)
+
+
+
+
+
+
+
+
 
