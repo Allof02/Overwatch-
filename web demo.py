@@ -1,7 +1,7 @@
 
 import requests
 
-r = requests.get('https://owapi.io/profile/pc/us/ZEROTWO-12301')
+r = requests.get('https://owapi.io/profile/pc/us/Z9HONG-1578')
 print(r.json())
 data = r.json()
 
@@ -16,7 +16,7 @@ portrait = data["portrait"]
 
 quickplay = data["games"]['quickplay']
 qpwon = data['games']['quickplay']['won']
-qptotal = data['games']['quickplay']['played']
+#qptotal = data['games']['quickplay']['played']       !!!Some players' profile doesn't show total played games for Quickplay!!!
 qptime = data['playtime']['quickplay']
 
 comp = data["games"]['competitive']
@@ -61,7 +61,7 @@ with open('xxx.csv' , 'w', newline='') as csv_file:
     csv_writer.writerow(['---QuickPlay---'])
     csv_writer.writerow(['Playtime:'] + [qptime])
     csv_writer.writerow(['Won:'] + [qpwon])
-    csv_writer.writerow(['Played:'] + [qptotal])
+    #csv_writer.writerow(['Played:'] + [qptotal])          
     csv_writer.writerow(['---Competitive---'])
     csv_writer.writerow(['Playedtime:'] + [comptime])
     csv_writer.writerow(['Won:'] + [compwon])
