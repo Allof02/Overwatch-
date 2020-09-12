@@ -16,7 +16,7 @@ portrait = data["portrait"]
 
 quickplay = data["games"]['quickplay']
 qpwon = data['games']['quickplay']['won']
-#qptotal = data['games']['quickplay']['played']       !!!Some players' profile doesn't show total played games for Quickplay!!!
+#qptotal = data['games']['quickplay']['played']       !!!Some players' profile doesn't show total played games for Quickplay!!! ?????????????????????????
 qptime = data['playtime']['quickplay']
 
 comp = data["games"]['competitive']
