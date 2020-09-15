@@ -81,6 +81,13 @@ with open('xxx.csv' , 'w', newline='') as csv_file:
     csv_writer.writerow(['IMG:'] + [suprank_img])
 
 
+
+
+
+   ### https://ow-api.com/v1/stats/pc/us/Z9HONG-1578/heroes/roadhog      API for specific heroes ###
+   ### https://ow-api.com/v1/stats/pc/us/Z9HONG-1578/complete  MORE INFO ###
+
+
     
     
 
