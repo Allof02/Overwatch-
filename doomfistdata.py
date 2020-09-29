@@ -7,11 +7,8 @@ elimPerLife = data['quickPlayStats']['topHeroes']['doomfist']['eliminationsPerLi
 
 print(elimPerLife)
 
-import time
-
-t = time.localtime()
-current_time = time.strftime("%H:%M:%S", t)
-print(current_time)
+import datetime
+Current_Date = datetime.date.today()
 
 import csv
 
@@ -21,6 +18,7 @@ with open ('DoomfistDamage.csv' , newline='') as csv_file:
     for row in csv_reader:
         print(row)
 
-with open('DoomfistDamage.csv' , 'w', newline='') as csv_file:
+with open('DoomfistDamage.csv' , 'a', newline='') as csv_file:
     csv_writer = csv.writer(csv_file, delimiter = ' ')
-    csv_writer.writerow([current_time] + [elimPerLife])
+    csv_writer.writerow(['CurrentDate', 'elimPerLife'])
+    csv_writer.writerow([Current_Date , elimPerLife])
