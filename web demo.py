@@ -5,7 +5,7 @@ r = requests.get('https://owapi.io/profile/pc/us/Z9HONG-1578')
 print(r.json())
 data = r.json()
 
-#Variables
+#Variables 还有data没有列举，摸会鱼再搞
 
 private = data['private']
 
@@ -16,7 +16,7 @@ portrait = data["portrait"]
 
 quickplay = data["games"]['quickplay']
 qpwon = data['games']['quickplay']['won']
-#qptotal = data['games']['quickplay']['played']       !!!Some players' profile doesn't show total played games for Quickplay!!! ?????????????????????????
+#qptotal = data['games']['quickplay']['played']       !!!Some players' profile doesn't show total played games for Quickplay!!! 下周一对此处修改
 qptime = data['playtime']['quickplay']
 
 comp = data["games"]['competitive']
@@ -36,8 +36,14 @@ dpsrank_img = data['competitive']['damage']['rank_img']
 suprank = data['competitive']['support']['rank']
 suprank_img = data['competitive']['support']['rank_img']
 
-#Tring to do a loop, for example, if private is true, then stop importing csv and print 'private', if private is false, then continue to import csv
-#but dont know how =.=
+import time
+
+t = time.localtime()
+current_time = time.strftime("%H:%M:%S", t)
+print(current_time)
+
+#do a loop, for example, if private is true, then stop importing csv and print 'private', if private is false, then continue to import csv
+#
 
 #if private == 'false'
    # print('Private')
@@ -46,7 +52,6 @@ suprank_img = data['competitive']['support']['rank_img']
 
 import csv
 
-#CSV WRITERS 
 
 with open ('xxx.csv' , newline='') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter = ',')
@@ -79,6 +84,7 @@ with open('xxx.csv' , 'w', newline='') as csv_file:
     csv_writer.writerow(['[Support]'])
     csv_writer.writerow(['Rank:'] + [suprank])
     csv_writer.writerow(['IMG:'] + [suprank_img])
+    csv_writer.writerow(['CurrentTime:'] + [current_time])
 
 
 
