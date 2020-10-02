@@ -5,7 +5,7 @@ r = requests.get('https://owapi.io/profile/pc/us/Z9HONG-1578')
 print(r.json())
 data = r.json()
 
-#Variables 还有data没有列举，摸会鱼再搞
+
 
 private = data['private']
 
