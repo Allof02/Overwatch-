@@ -1,7 +1,7 @@
 
 import requests
 
-r = requests.get('https://owapi.io/profile/pc/us/Z9HONG-1578')
+r = requests.get('https://owapi.io/profile/pc/us/ZEROTWO-12301')
 print(r.json())
 data = r.json()
 
