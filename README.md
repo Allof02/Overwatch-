@@ -49,7 +49,8 @@ DEMO (CSV file)
 
 
 
-DEMO (Chart pics)
+## DEMO (Chart pics)
+<p align=center><img src="newplot (1).png"></img></p>
 
 
 
