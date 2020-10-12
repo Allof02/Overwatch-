@@ -55,14 +55,12 @@ DEMO (Chart pics)
 
 
 
-Requirement
+# Install
 
-Install
+* pandas
 
-1.pandas
+* plotly.graph_objects
 
-2.plotly.graph_objects
-
-3.plotly.subplots
+* plotly.subplots
 
 
