@@ -1,20 +1,11 @@
-OVERWATCH PROFILE
+#OVERWATCH PROFILE
 
-（pictures)
-
-Features
-
--Profile Data
-
--Competitive Rank
-
--QuickPlay Data
-
--Specific Tank Hero Data
-
--Convert Data to Chart
-
--Record every change on specific hero stats
+* Profile Data*
+* Competitive Rank*
+* QuickPlay Data
+  * Specific Tank Hero Data
+  * Convert Data to Chart
+  * Record every change on specific hero stats
 
 DEMO (Profile)
 
