@@ -1,5 +1,7 @@
 # OVERWATCH PROFILE
 
+<p align=center><img src="Overwatch-Logo.png"></img></p>
+
 * Profile Data*
 * Competitive Rank*
 * QuickPlay Data
