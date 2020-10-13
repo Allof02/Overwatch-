@@ -1,3 +1,5 @@
+# rename this file name to 'plot_csv.py'
+
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import pandas as pd 
@@ -44,7 +46,7 @@ fig.add_trace(
 fig.update_layout(legend_title_text='dVa')
 fig.show()
 
-
+# you only need to import once at the beginning of each file
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import pandas as pd 
@@ -91,6 +93,7 @@ fig.add_trace(
 fig.update_layout(legend_title_text='Zarya')
 fig.show()
 
+# you only need to import once at the beginning of each file
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import pandas as pd 
@@ -137,7 +140,7 @@ fig.add_trace(
 fig.update_layout(legend_title_text='Sigma')
 fig.show()
 
-
+# you only need to import once at the beginning of each file
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import pandas as pd 

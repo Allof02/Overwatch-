@@ -2,14 +2,16 @@
 
 <p align=center><img src="Overwatch-Logo.png"></img></p>
 
+<!-- add ANCHOR LINKS to this table of contents (guide https://gist.github.com/rachelhyman/b1f109155c9dafffe618) -->
 * Profile Data*
-* Competitive Rank*
+* Competitive Rank* <!--  depending if youre adding comp -->
 * QuickPlay Data
   * Specific Tank Hero Data
   * Convert Data to Chart
   * Record every change on specific hero stats
 
 ## DEMO (Profile)
+<!-- remove https://... just have ZEROTWO-12301 -->
 ```
 https://ow-api.com/v1/stats/pc/us/ZEROTWO-12301/complete
 ```
@@ -50,18 +52,19 @@ DEMO (CSV file)
 
 
 ## DEMO (Chart pics)
+<!-- Rename your plot names to specific heroes -->
+<!-- add axis labels to your plots, I don't really like the look of having dual axis. I think it can get confusing. Try a 2x3 combination and see how that looks for 6 subplots -->
 <p align=center><img src="newplot (1).png"></img></p>
 
 
 
 
 
+<!-- Rename to third party libraries used -->
 # Install
 
 * pandas
-
 * plotly.graph_objects
-
 * plotly.subplots
 
 

@@ -1,3 +1,5 @@
+# rename this file name to 'api_to_csv.py'
+
 import requests
 r = requests.get('https://ow-api.com/v1/stats/pc/us/ZEROTWO-12301/complete')
 print(r.json())
@@ -47,7 +49,7 @@ def get_sigma_data(data):
 
 
 
-
+# try to have all your imports at the beginning of each file
 import datetime
 Current_Date = datetime.date.today()
 
