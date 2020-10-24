@@ -1,22 +1,19 @@
-
 import requests
+import csv
+import time
 
-r = requests.get('https://owapi.io/profile/pc/us/ZEROTWO-12301')
+r = requests.get('https://ow-api.com/v1/stats/pc/us/ZEROTWO-12301/profile')
 print(r.json())
 data = r.json()
 
-
-
-private = data['private']
-
-username = data["username"]
+username = data["name"]
 level = data["level"]
-levelframe = data['levelFrame']
-portrait = data["portrait"]
+levelframe = data['levelIcon']
+portrait = data["icon"]
 
-quickplay = data["games"]['quickplay']
+
 qpwon = data['games']['quickplay']['won']
-#qptotal = data['games']['quickplay']['played']       !!!Some players' profile doesn't show total played games for Quickplay!!! 下周一对此处修改
+qptotal = data['games']['quickplay']['played']
 qptime = data['playtime']['quickplay']
 
 comp = data["games"]['competitive']
@@ -36,21 +33,10 @@ dpsrank_img = data['competitive']['damage']['rank_img']
 suprank = data['competitive']['support']['rank']
 suprank_img = data['competitive']['support']['rank_img']
 
-import time
 
 t = time.localtime()
 current_time = time.strftime("%H:%M:%S", t)
 print(current_time)
-
-#do a loop, for example, if private is true, then stop importing csv and print 'private', if private is false, then continue to import csv
-#
-
-#if private == 'false'
-   # print('Private')
-        #break
-#else:
-
-import csv
 
 
 with open ('xxx.csv' , newline='') as csv_file:
@@ -66,7 +52,7 @@ with open('xxx.csv' , 'w', newline='') as csv_file:
     csv_writer.writerow(['---QuickPlay---'])
     csv_writer.writerow(['Playtime:'] + [qptime])
     csv_writer.writerow(['Won:'] + [qpwon])
-    #csv_writer.writerow(['Played:'] + [qptotal])          
+    csv_writer.writerow(['Played:'] + [qptotal])
     csv_writer.writerow(['---Competitive---'])
     csv_writer.writerow(['Playedtime:'] + [comptime])
     csv_writer.writerow(['Won:'] + [compwon])
@@ -86,16 +72,40 @@ with open('xxx.csv' , 'w', newline='') as csv_file:
     csv_writer.writerow(['IMG:'] + [suprank_img])
     csv_writer.writerow(['CurrentTime:'] + [current_time])
 
+# #Example
+# Username: ZEROTWO
+# Level: 57
+# Portrait: https://d15f34w2p8l1cc.cloudfront.net/overwatch/1d754ab4338bb097f0bb7d69fe4f14c41599bc5b3ea5fa21fef68a5a1b4f9796.png
+# ---QuickPlay---
+# Playtime: 47:05:46
+# Won: 181
+# ---Competitive---
+# Playedtime: 48:49
+# Won: 3
+# Lost: 2
+# Draw: 0
+# Played: 5
+# Win Rate:
+# ---Ranking---
+# [Tank]
+# Rank: 2631
+# IMG: https://d1u1mce87gyfbn.cloudfront.net/game/rank-icons/rank-PlatinumTier.png
+# [Damage]
+# Rank:
+# IMG:
+# [Support]
+# Rank:
+# IMG:
+# CurrentTime: 13:04:33
 
 
 
 
-   ### https://ow-api.com/v1/stats/pc/us/Z9HONG-1578/heroes/roadhog      API for specific heroes ###
-   ### https://ow-api.com/v1/stats/pc/us/Z9HONG-1578/complete  MORE INFO ###
 
 
-    
-    
+
+
+
 
 
 

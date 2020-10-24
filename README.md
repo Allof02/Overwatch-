@@ -10,9 +10,6 @@
   * Record every change on specific hero stats
 
 ## DEMO (Profile)
-```
-https://ow-api.com/v1/stats/pc/us/ZEROTWO-12301/complete
-```
 ```csv
 Username: ZEROTWO
 Level: 57
@@ -26,7 +23,7 @@ Won: 3
 Lost: 2
 Draw: 0
 Played: 5
-Win Rate: 
+Win Rate:
 ---Ranking---
 [Tank]
 Rank: 2631
@@ -56,7 +53,7 @@ DEMO (CSV file)
 
 
 
-# Install
+# Third Party Libraries Used
 
 * pandas
 

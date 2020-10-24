@@ -1,6 +1,6 @@
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
-import pandas as pd 
+import pandas as pd
 
 df = pd.read_csv('herodata.csv', ' ')
 
@@ -41,13 +41,12 @@ fig.add_trace(
     go.Scatter(x=df['current_Date'], y=df['dva_winper'], name="Win Percentage"),
     row=2, col=1, secondary_y=True,
 )
-fig.update_layout(legend_title_text='dVa')
+fig.update_layout(
+    title_text='dVa'
+)
 fig.show()
 
 
-import plotly.graph_objects as go
-from plotly.subplots import make_subplots
-import pandas as pd 
 
 df = pd.read_csv('herodata.csv', ' ')
 
@@ -88,12 +87,9 @@ fig.add_trace(
     go.Scatter(x=df['current_Date'], y=df['Zarya_winper'], name="Win Percentage"),
     row=2, col=1, secondary_y=True,
 )
-fig.update_layout(legend_title_text='Zarya')
+fig.update_layout(title_text='Zarya')
 fig.show()
 
-import plotly.graph_objects as go
-from plotly.subplots import make_subplots
-import pandas as pd 
 
 df = pd.read_csv('herodata.csv', ' ')
 
@@ -134,13 +130,11 @@ fig.add_trace(
     go.Scatter(x=df['current_Date'], y=df['sig_winper'], name="Win Percentage"),
     row=2, col=1, secondary_y=True,
 )
-fig.update_layout(legend_title_text='Sigma')
+fig.update_layout(title_text='Sigma')
 fig.show()
 
 
-import plotly.graph_objects as go
-from plotly.subplots import make_subplots
-import pandas as pd 
+
 
 df = pd.read_csv('herodata.csv', ' ')
 
@@ -181,5 +175,5 @@ fig.add_trace(
     go.Scatter(x=df['current_Date'], y=df['orisa_winper'], name="Win Percentage"),
     row=2, col=1, secondary_y=True,
 )
-fig.update_layout(legend_title_text='Orisa')
+fig.update_layout(title_text='Orisa')
 fig.show()

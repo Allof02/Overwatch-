@@ -1,4 +1,6 @@
 import requests
+import datetime
+import csv
 r = requests.get('https://ow-api.com/v1/stats/pc/us/ZEROTWO-12301/complete')
 print(r.json())
 data = r.json()
@@ -6,9 +8,9 @@ data = r.json()
 def get_orisa_data(data):
     orisa_gamewon = data['quickPlayStats']['careerStats']['orisa']['game']['gamesWon']
     orisa_weaponAccu = data['quickPlayStats']['careerStats']['orisa']['combat']['weaponAccuracy']
-    orisa_multikills = data['quickPlayStats']['topHeroes']['orisa']["multiKillBest"] 
-    orisa_objkill = data['quickPlayStats']['careerStats']['orisa']['combat']["objectiveKills"] 
-    orisa_winper = data['quickPlayStats']['careerStats']['orisa']['game']["winPercentage"] 
+    orisa_multikills = data['quickPlayStats']['topHeroes']['orisa']["multiKillBest"]
+    orisa_objkill = data['quickPlayStats']['careerStats']['orisa']['combat']["objectiveKills"]
+    orisa_winper = data['quickPlayStats']['careerStats']['orisa']['game']["winPercentage"]
     orisa_elimperlife = data['quickPlayStats']['careerStats']['orisa']['average']['eliminationsPerLife']
 
     return [orisa_gamewon, orisa_weaponAccu, orisa_multikills, orisa_objkill, orisa_winper, orisa_elimperlife]
@@ -32,7 +34,7 @@ def get_zarya_data(data):
     zarya_multikill = data['quickPlayStats']['careerStats']['zarya']['best']["multikillsBest"] 
     zarya_objkill = data['quickPlayStats']['careerStats']['zarya']['combat']["objectiveKills"] 
     zarya_winper = data['quickPlayStats']['careerStats']['zarya']['game']["winPercentage"] 
-    
+
     return [zarya_elimperlife, zarya_weaponAcc, zarya_gamewon, zarya_multikill, zarya_objkill, zarya_winper]
 
 def get_sigma_data(data):
@@ -46,13 +48,7 @@ def get_sigma_data(data):
     return [sig_gamewon, sig_weaponAccu, sig_multikills, sig_objkill, sig_winper, sig_elimperlife]
 
 
-
-
-import datetime
 Current_Date = datetime.date.today()
-
-import csv
-
 
 with open ('herodata.csv' , newline='') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter = ',')
