@@ -47,7 +47,7 @@ DEMO (CSV file)
 
 
 ## DEMO (Chart pics)
-<p align=center><img src="newplot (1).png"></img></p>
+<p align=center><img src="dva demo plot.png"></img></p>
 
 
 
