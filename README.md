@@ -61,4 +61,11 @@ CurrentTime: 13:04:33
 
 * plotly.subplots
 
+ # What Happens Here
+1. Run the api_to_csv.py
+2. Data will be pulled from the api and then write into the herodata.csv
+3. Everytime run the api_to_csv.py file, the data will be recorded without overwriting the previous data.
+4. Run the plot_csv.py file
+5. It will convert the data from herodata.csv into charts (DEMO Chart Pics)
+
 
